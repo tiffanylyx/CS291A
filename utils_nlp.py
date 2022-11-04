@@ -31,22 +31,8 @@ import torch
 
 import time
 
-
-
-with open('model/pca4.pkl', 'rb') as pickle_file:
-    pca4 = pickle.load(pickle_file)
-with open('model/pca2.pkl', 'rb') as pickle_file:
-    pca2 = pickle.load(pickle_file)
-with open('model/pca3.pkl', 'rb') as pickle_file:
-    pca3 = pickle.load(pickle_file)
-
-with open('model/pca3_sentenceVec_transformer.pkl', 'rb') as pickle_file:
-    pca3_sentenceVec = pickle.load(pickle_file)
-
-model_word = Word2Vec.load("model/word2vec_text8.model")
-
 from nltk.corpus import cmudict
-d = cmudict.dict()
+
 # This function is used to clean the sentence
 def pre_process_sentence(sentence):
     tokens = nltk.tokenize.word_tokenize(sentence)
@@ -237,5 +223,18 @@ def main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d):
 
 if __name__ == '__main__':
     sentence = 'this is a demo'
+    d = cmudict.dict()
+    with open('model/pca4.pkl', 'rb') as pickle_file:
+        pca4 = pickle.load(pickle_file)
+    with open('model/pca2.pkl', 'rb') as pickle_file:
+        pca2 = pickle.load(pickle_file)
+    with open('model/pca3.pkl', 'rb') as pickle_file:
+        pca3 = pickle.load(pickle_file)
+
+    with open('model/pca3_sentenceVec_transformer.pkl', 'rb') as pickle_file:
+        pca3_sentenceVec = pickle.load(pickle_file)
+
+    model_word = Word2Vec.load("model/word2vec_text8.model")
+
     res = main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d)
     print(res)
