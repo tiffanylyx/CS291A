@@ -1,0 +1,10 @@
+numpy==1.23.1
+sympy==1.10.1
+gensim==4.2.0
+nltk==3.7
+scikit-learn==1.1.1
+scipy==1.8.1
+textblob
+pillow
+torch==1.11.0
+transformers
