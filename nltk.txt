@@ -2,5 +2,4 @@ cmudict
 averaged_perceptron_tagger
 universal_tagset
 punkt
-genesis
 gazetteers
