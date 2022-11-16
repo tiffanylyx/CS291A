@@ -52,20 +52,20 @@ def mean_pooling(model_output, attention_mask):
     input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
     return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
+csv_model = transformers.AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+csv_tokenizer = transformers.AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+
 # This function is used to compute 3D sentence vector
 def compute_sent_vec(sentence, pca3_sentenceVec):
-
-    model = transformers.AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
-    tokenizer = transformers.AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
-
-    encoded_input = tokenizer(sentence, padding=True, truncation=True, return_tensors='pt')
+    encoded_input = csv_tokenizer(sentence, padding=True, truncation=True, return_tensors='pt')
     with torch.no_grad():
-        model_output = model(**encoded_input)
+        model_output = csv_model(**encoded_input)
     sentence_embeddings = mean_pooling(model_output, encoded_input['attention_mask'])
     sentence_embeddings = F.normalize(sentence_embeddings, p=2, dim=1)
     res = pca3_sentenceVec.transform(sentence_embeddings)[0]
     normalized_res = res/np.linalg.norm(res)
     return normalized_res
+
 
 # This function is used to compute each word's vector in a sentence
 def compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, dim):
@@ -213,11 +213,32 @@ def compute_syllables(sentence,d):
         res_all.append(list_res)
     return res_all
 
-def main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d):
+d = cmudict.dict()
+script_dir = os.path.dirname(__file__)
+with open(os.path.join(script_dir, 'model/pca4.pkl'), 'rb') as pickle_file:
+    pca4 = pickle.load(pickle_file)
+with open(os.path.join(script_dir, 'model/pca2.pkl'), 'rb') as pickle_file:
+    pca2 = pickle.load(pickle_file)
+with open(os.path.join(script_dir, 'model/pca3.pkl'), 'rb') as pickle_file:
+    pca3 = pickle.load(pickle_file)
+with open(os.path.join(script_dir, 'model/pca3_sentenceVec_transformer.pkl'), 'rb') as pickle_file:
+    pca3_sentenceVec = pickle.load(pickle_file)
+
+model_word = Word2Vec.load(os.path.join(script_dir, "model/word2vec_text8.model"))
+
+def analyze_sentence(sentence_list):
+    res_all_sentence = {}
+    for index,sentence in enumerate(sentence_list):
+        res = main_analyzer(sentence)
+        res_all_sentence[index] = res
+
+    return json.dumps(res_all_sentence)
+
+def main_analyzer(sentence):
     all_result = {}
     sentence = pre_process_sentence(sentence)
     syllables = compute_syllables(sentence,d)
-    cfg = get_cfg_structure(sentence)
+    #cfg = get_cfg_structure(sentence)
     senti = compute_sent_sentiment(sentence)
     noun_count,verb_count = compute_sent_parts(sentence)
 
@@ -229,7 +250,7 @@ def main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d):
     all_result['senti'] = senti
     #all_result['pos'] = pos
     #all_result['word_vec'] = word_vec
-    all_result['sent_vec'] = sent_vec.tolist()
+    all_result['sent_vec'] = [vec.tolist() for vec in sent_vec]
     all_result['sentence'] = sentence
     all_result['sentence_length'] = compute_sent_length(sentence)
     all_result['noun'] = noun_count
@@ -241,23 +262,6 @@ def main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d):
 
 if __name__ == '__main__':
     sentence_list = ['this is a demo', 'i am happy to meet you today', 'i went to the museum with my best friend','it is a beautiful day for me']
-    d = cmudict.dict()
-    with open('model/pca4.pkl', 'rb') as pickle_file:
-        pca4 = pickle.load(pickle_file)
-    with open('model/pca2.pkl', 'rb') as pickle_file:
-        pca2 = pickle.load(pickle_file)
-    with open('model/pca3.pkl', 'rb') as pickle_file:
-        pca3 = pickle.load(pickle_file)
-
-    with open('model/pca3_sentenceVec_transformer.pkl', 'rb') as pickle_file:
-        pca3_sentenceVec = pickle.load(pickle_file)
-
-    model_word = Word2Vec.load("model/word2vec_text8.model")
-    res_all_sentence = {}
-    for index,sentence in enumerate(sentence_list):
-        res = main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d)
-        res_all_sentence[index] = res
-    with open('mydata.json', 'w') as f:
-        json.dump(res_all_sentence, f)
+    res = analyze_sentence(sentence_list)
 
     print(res)
