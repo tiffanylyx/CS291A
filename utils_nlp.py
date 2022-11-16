@@ -30,6 +30,7 @@ import os
 import torch
 
 import time
+import json
 
 from nltk.corpus import cmudict
 
@@ -82,7 +83,7 @@ def compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, dim):
         except:
             res = [random.random(),random.random(),random.random()]
         normalized_res = res/np.linalg.norm(res)
-        res_vec.append(normalized_res)
+        res_vec.append(normalized_res.tolist())
 
     return res_vec
 
@@ -90,7 +91,14 @@ def compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, dim):
 def compute_sent_parts(sentence):
     tokens = nltk.tokenize.word_tokenize(sentence)
     res = nltk.pos_tag(tokens,tagset='universal')
-    return res
+    noun_count = 0
+    verb_count = 0
+    for i in res:
+        if i[1]=='NOUN':
+            noun_count+=1
+        elif i[1]=='VERB':
+            verb_count+=1
+    return noun_count,verb_count
 
 # To compute the word length
 def compute_word_length(word):
@@ -102,6 +110,10 @@ def compute_sent_sentiment(sentence):
     sentiment = res.sentiment.polarity
     sentiment = (sentiment + 1)/2
     return sentiment
+
+def compute_sent_length(sentence):
+    tokens = nltk.tokenize.word_tokenize(sentence)
+    return len(tokens)
 
 def flat(nums):
     count = 0
@@ -207,22 +219,28 @@ def main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d):
     syllables = compute_syllables(sentence,d)
     cfg = get_cfg_structure(sentence)
     senti = compute_sent_sentiment(sentence)
-    pos = compute_sent_parts(sentence)
+    noun_count,verb_count = compute_sent_parts(sentence)
+
     word_vec =  compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, 3)
+
     sent_vec = compute_sent_vec(sentence, pca3_sentenceVec)
-    all_result['syllables'] = syllables
-    all_result['cfg'] = cfg
+    all_result['syllables'] = len(syllables)
+    #all_result['cfg'] = cfg
     all_result['senti'] = senti
-    all_result['pos'] = pos
-    all_result['word_vec'] = word_vec
-    all_result['sent_vec'] = sent_vec
+    #all_result['pos'] = pos
+    #all_result['word_vec'] = word_vec
+    all_result['sent_vec'] = sent_vec.tolist()
     all_result['sentence'] = sentence
+    all_result['sentence_length'] = compute_sent_length(sentence)
+    all_result['noun'] = noun_count
+    all_result['verb'] = verb_count
+
 
     return all_result
 
 
 if __name__ == '__main__':
-    sentence = 'this is a demo'
+    sentence_list = ['this is a demo', 'i am happy to meet you today', 'i went to the museum with my best friend','it is a beautiful day for me']
     d = cmudict.dict()
     with open('model/pca4.pkl', 'rb') as pickle_file:
         pca4 = pickle.load(pickle_file)
@@ -235,6 +253,11 @@ if __name__ == '__main__':
         pca3_sentenceVec = pickle.load(pickle_file)
 
     model_word = Word2Vec.load("model/word2vec_text8.model")
+    res_all_sentence = {}
+    for index,sentence in enumerate(sentence_list):
+        res = main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d)
+        res_all_sentence[index] = res
+    with open('mydata.json', 'w') as f:
+        json.dump(res_all_sentence, f)
 
-    res = main(sentence,pca2,pca3,pca4,pca3_sentenceVec,model_word,d)
     print(res)
