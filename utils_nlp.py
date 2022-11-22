@@ -249,7 +249,7 @@ def main_analyzer(sentence):
     #all_result['cfg'] = cfg
     all_result['senti'] = senti
     #all_result['pos'] = pos
-    #all_result['word_vec'] = word_vec
+    all_result['word_vec'] = word_vec
     all_result['sent_vec'] = [vec.tolist() for vec in sent_vec]
     all_result['sentence'] = sentence
     all_result['sentence_length'] = compute_sent_length(sentence)
@@ -261,7 +261,14 @@ def main_analyzer(sentence):
 
 
 if __name__ == '__main__':
-    sentence_list = ['this is a demo', 'i am happy to meet you today', 'i went to the museum with my best friend','it is a beautiful day for me']
+    sentence_list = ['this is a demo',
+    'i am happy to meet you today',
+    'i went to the museum with my best friend',
+    'it is a beautiful day for me',
+    'i am going through a hard day',
+    'too many dealines are approaching and i cannot finish everything']
     res = analyze_sentence(sentence_list)
+    with open('mydata.json', 'w') as f:
+        f.write(res)
 
     print(res)
