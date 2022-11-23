@@ -33,6 +33,8 @@ import time
 import json
 
 from nltk.corpus import cmudict
+from nltk.chat.eliza import eliza_chatbot
+
 
 # This function is used to clean the sentence
 def pre_process_sentence(sentence):
@@ -225,6 +227,16 @@ with open(os.path.join(script_dir, 'model/pca3_sentenceVec_transformer.pkl'), 'r
     pca3_sentenceVec = pickle.load(pickle_file)
 
 model_word = Word2Vec.load(os.path.join(script_dir, "model/word2vec_text8.model"))
+
+
+def analyze_sentence_eliza(sentence_list):
+    res_all_sentence = {}
+    for index, sentence in enumerate(sentence_list):
+        res = main_analyzer(sentence)
+        res['eliza'] = eliza_chatbot.respond(sentence)
+        res_all_sentence[index] = res
+    return json.dumps(res_all_sentence)
+
 
 def analyze_sentence(sentence_list):
     res_all_sentence = {}
