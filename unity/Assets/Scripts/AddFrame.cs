@@ -13,78 +13,83 @@ public class AddFrame : MonoBehaviour
     public float frame_size;
     public float senti_average;
     int number;
-    
+
     public float spawn_prob1;
     public float spawn_prob2;
 
     int wordCount;
     int nounCount;
     int verbCount;
-     
+    private loadJSON parser;
+
 
     // Start is called before the first frame update
     void Start()
-    {   
-        loadJSON JsonLoader = gameObject.GetComponent<loadJSON> ();
+    {
+        parser = gameObject.GetComponent<loadJSON>();
+        parser.OnChange.AddListener(GenerateGraphics);
+    }
 
-        wordCount = JsonLoader.wordCount;
-        nounCount = JsonLoader.nounCount;
-        verbCount = JsonLoader.verbCount;
-        spawn_prob1 = (float)nounCount/(float)wordCount;
-        spawn_prob2 = (float)verbCount/(float)wordCount;
-        number = (int)(2*(float)size/frame_size);
+    private void GenerateGraphics()
+    {
+        wordCount = parser.wordCount;
+        nounCount = parser.nounCount;
+        verbCount = parser.verbCount;
+        spawn_prob1 = (float)nounCount / (float)wordCount;
+        spawn_prob2 = (float)verbCount / (float)wordCount;
+        number = (int)(2 * (float)size / frame_size);
         float p1, p2, p3, p4;
-        senti_all = JsonLoader.senti_all;
+        senti_all = parser.senti_all;
         for (int i = 0; i < senti_all.Count; i++)
         {
-            senti_average+=senti_all[i];
-            
+            senti_average += senti_all[i];
+
         }
-        senti_average = senti_average/senti_all.Count;
+        senti_average = senti_average / senti_all.Count;
 
         GameObject cube = Instantiate(outsideCube);
         cube.transform.SetParent(transform);
         Material material = new Material(Shader.Find("Shader Graphs/Grid Shadergraph 1"));
-        Color customColor = Color.HSVToRGB(senti_average, senti_average/3,senti_average/2);
+        Color customColor = Color.HSVToRGB(senti_average, senti_average / 3, senti_average / 2);
         Debug.Log(customColor);
-        material.SetColor("_BaseColor",customColor);
+        material.SetColor("_BaseColor", customColor);
         cube.GetComponent<MeshRenderer>().material = material;
 
 
-        for(int r=0; r<number; r++){
-            for(int c=0; c<number; c++){
+        for (int r = 0; r < number; r++)
+        {
+            for (int c = 0; c < number; c++)
+            {
                 p1 = Random.Range(0.0f, 1.0f);
-                if(p1<spawn_prob1){
+                if (p1 < spawn_prob1)
+                {
                     GameObject newFFTObject = Instantiate(_FrameToSpawn1);
                     newFFTObject.transform.SetParent(transform);
-                    newFFTObject.transform.localPosition =  new Vector3(-size, r-size+frame_size/2,c-size+frame_size/2);
+                    newFFTObject.transform.localPosition = new Vector3(-size, r - size + frame_size / 2, c - size + frame_size / 2);
                 }
                 p2 = Random.Range(0.0f, 1.0f);
-                if(p2<spawn_prob1){
-                     GameObject newFFTObject = Instantiate(_FrameToSpawn1);
+                if (p2 < spawn_prob1)
+                {
+                    GameObject newFFTObject = Instantiate(_FrameToSpawn1);
                     newFFTObject.transform.SetParent(transform);
-                    newFFTObject.transform.localPosition =  new Vector3(size, r-size+0.5f,c-size+0.5f);
-                   }   
+                    newFFTObject.transform.localPosition = new Vector3(size, r - size + 0.5f, c - size + 0.5f);
+                }
                 p3 = Random.Range(0.0f, 1.0f);
-                if(p3<spawn_prob2){
-                     GameObject newFFTObject = Instantiate(_FrameToSpawn2);
+                if (p3 < spawn_prob2)
+                {
+                    GameObject newFFTObject = Instantiate(_FrameToSpawn2);
                     newFFTObject.transform.SetParent(transform);
-                    newFFTObject.transform.localPosition =  new Vector3(r-size+0.5f,c-size+0.5f, size);
-                   }    
+                    newFFTObject.transform.localPosition = new Vector3(r - size + 0.5f, c - size + 0.5f, size);
+                }
                 p4 = Random.Range(0.0f, 1.0f);
-                if(p4<spawn_prob2){
-                     GameObject newFFTObject = Instantiate(_FrameToSpawn2);
+                if (p4 < spawn_prob2)
+                {
+                    GameObject newFFTObject = Instantiate(_FrameToSpawn2);
                     newFFTObject.transform.SetParent(transform);
-                    newFFTObject.transform.localPosition =  new Vector3(r-size+0.5f,c-size+0.5f, -size);
-                   }                                                  
-        }
-        
-    }
-    }
+                    newFFTObject.transform.localPosition = new Vector3(r - size + 0.5f, c - size + 0.5f, -size);
+                }
+            }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }

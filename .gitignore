@@ -169,3 +169,6 @@ unity/**/manifest.json.backup*
 #Git
 .orig
 .orig.meta
+
+#Mac
+.DS_Store

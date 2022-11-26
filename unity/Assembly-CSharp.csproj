@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0D3BA33E-4325-2DBE-C90A-2CA73350BF96}</ProjectGuid>
+    <ProjectGuid>{9C301BC4-33D1-BC2F-38D0-574955D3EECE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2021_3_11;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_11;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AddFrame.cs" />
     <Compile Include="Assets\Scripts\AudioShape.cs" />
+    <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\AssemblyInfo.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\MESHGENERATOR.cs" />
@@ -66,13 +67,38 @@
     <Compile Include="Assets\Scripts\loadJSON.cs" />
     <Compile Include="Assets\Scripts\FrequencyBandAnalyser.cs" />
     <Compile Include="Assets\Scripts\AudioShapeSurface.cs" />
+    <Compile Include="Assets\Scripts\Chat\ElizaDisplay.cs" />
     <Compile Include="Assets\Scripts\FFTObjectV2.cs" />
     <Compile Include="Assets\Scripts\FFTObjectArray.cs" />
     <Compile Include="Assets\Scripts\FFTLine.cs" />
     <Compile Include="Assets\Scripts\AudioReactMesh.cs" />
     <Compile Include="Assets\Scripts\FFTSetMaterialColour.cs" />
     <Compile Include="Assets\Scripts\AudioPoint.cs" />
+    <Compile Include="Assets\Scripts\CustomInteractionHandler.cs" />
     <Compile Include="Assets\Scripts\AudioRandomMesh.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -309,14 +335,8 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="NetMQ">
+      <HintPath>Assets\Plugins\NetMQ.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
@@ -324,14 +344,32 @@
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="AsyncIO">
+      <HintPath>Assets\Plugins\AsyncIO.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Assets\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NaCl">
+      <HintPath>Assets\Plugins\NaCl.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -708,291 +746,295 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{448DC9DE-FC34-CE7B-68B7-D3041FF3F9CF}</Project>
+      <Project>{90F68A52-FFDD-756E-05F8-815D49A7BF5E}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{4F5B23E5-33AE-28BE-E346-A99B19EE3755}</Project>
+      <Project>{9A8D9EEA-230F-F588-61DA-D45835D4324D}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders</Name>
     </ProjectReference>
+    <ProjectReference Include="AssistantCoreSDKEditor.csproj">
+      <Project>{996EDCF6-AFF2-0E08-CD79-17989A4BAC0A}</Project>
+      <Name>AssistantCoreSDKEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{DAA553BB-3414-AE0C-7DFC-60F921264E3C}</Project>
+      <Project>{5446FC0E-60AF-374A-168D-61C1904882D0}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
-      <Project>{CAF56458-E0E8-DD85-F5E2-6C3D41BF34FF}</Project>
+      <Project>{6B81BF60-8E0F-97D7-7EF2-53F186BC9048}</Project>
       <Name>Unity.Performance.Profile-Analyzer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.007.csproj">
-      <Project>{8C0BF531-00BD-365D-C9AE-78827E2BC843}</Project>
-      <Name>Unity.InternalAPIEngineBridge.007</Name>
+    <ProjectReference Include="Oculus.Voice.Demo.csproj">
+      <Project>{0FF8AA38-19BF-0672-A79C-331D3D2EEEB9}</Project>
+      <Name>Oculus.Voice.Demo</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
-      <Project>{B956FE89-B500-4000-4F38-00AC4C91EC0D}</Project>
+      <Project>{B30B9634-512C-C959-9392-1255DEF02EC7}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Model</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
-      <Project>{E34EEBAA-D1E1-7C42-46E7-D1684A994ED7}</Project>
+      <Project>{C96BB0AD-5CA6-ED5C-EBDB-8E6BA5A86A5E}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="AssistantCoreSDKRuntime.csproj">
+      <Project>{242761C1-25A1-D7CE-8030-BBD8E64F99A3}</Project>
+      <Name>AssistantCoreSDKRuntime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{900CCAD5-6B80-0816-3D27-8C45BF903435}</Project>
+      <Project>{8FCF703F-E35D-3A23-C4F0-7EDB4F901DE1}</Project>
       <Name>Unity.Searcher.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Facebook.Wit.Conduit.csproj">
+      <Project>{AA81FE2F-8B13-AE65-4020-FE7F9E7946F2}</Project>
+      <Name>Facebook.Wit.Conduit</Name>
+    </ProjectReference>
+    <ProjectReference Include="LitJson.csproj">
+      <Project>{624B51AB-0D41-F159-0195-86C85981ADAF}</Project>
+      <Name>LitJson</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{8FC67781-AC3D-A741-A10A-AA3DDA529B75}</Project>
+      <Project>{061A5F06-80A5-4659-2285-44D0D873A735}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARCore.Editor.csproj">
-      <Project>{BB50DF50-0688-1F35-70D2-5946D0BC9A50}</Project>
+      <Project>{BD2548A7-795F-184F-2B5F-542180F66042}</Project>
       <Name>Unity.XR.ARCore.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.ARKit.Editor.csproj">
-      <Project>{2AD8258C-6C4E-3D47-71D9-53C2C8EB18A4}</Project>
-      <Name>Unity.XR.ARKit.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
-      <Project>{DD20308D-39D1-8931-6976-B47241624761}</Project>
+      <Project>{28068174-1CFB-C7F0-B8AF-1DF439456788}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{04969429-25CE-DE06-5E9A-E85F88DBF27D}</Project>
+      <Project>{6B48CF04-36E9-4837-7400-59B2E44ED179}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{BA044683-3AE1-5B61-7FBB-C6D903C4A1F8}</Project>
-      <Name>Unity.InputSystem</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{B9423C47-8A71-5FB4-DF88-746BCBD1413B}</Project>
+      <Project>{8C0A011D-2BDA-13EF-1BC9-EB0717450ECA}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{56A9420F-F0D7-0FC5-F440-8AB03C587576}</Project>
+      <Project>{5D6A00B8-F36D-269C-B954-51E3D7531BBC}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
-      <Project>{4517DE0C-A00E-8A7A-1BB0-1C392DECF9A0}</Project>
+      <Project>{EEDE62F1-2342-FB1B-BB0F-039F5E76D5D7}</Project>
       <Name>UnityEngine.SpatialTracking</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{3B433A32-E6A6-913D-1B9C-5ED73D6889E2}</Project>
+      <Project>{1212F6F7-C7C0-DBF9-6B88-AC2E72C36EF1}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="Facebook.WitAI.csproj">
+      <Project>{15F186E9-ED25-8193-4B17-FC821392E6E5}</Project>
+      <Name>Facebook.WitAI</Name>
+    </ProjectReference>
+    <ProjectReference Include="PubSub.csproj">
+      <Project>{794374C5-3B48-039D-9A12-2B0C10CC9923}</Project>
+      <Name>PubSub</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
-      <Project>{D965C7E7-7D4E-EEB5-3485-45FD64F85459}</Project>
+      <Project>{8D11E260-61F3-BA35-BCBF-5BB5B091D0C7}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.InteractionSubsystems.csproj">
-      <Project>{BBB00215-8DF6-2733-1808-D68F209583B1}</Project>
-      <Name>Unity.XR.InteractionSubsystems</Name>
+    <ProjectReference Include="Facebook.Wit.Dictation.Editor.csproj">
+      <Project>{44810F8A-959B-0A59-9CF2-F511553FD92B}</Project>
+      <Name>Facebook.Wit.Dictation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Facebook.Wit.Dictation.csproj">
+      <Project>{06B9D3F4-DE18-7B85-85D4-3B075F6829D9}</Project>
+      <Name>Facebook.Wit.Dictation</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
-      <Project>{BB60984B-156E-D660-2D0A-54EAC8329324}</Project>
+      <Project>{F428316B-0031-518B-D736-0C72415821EF}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{46C288B8-AD12-3371-8AA9-CEA23DF276AD}</Project>
+      <Project>{6592CEF8-C6C1-1E7A-CE09-F4459C55EDD8}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARSubsystems.Editor.csproj">
-      <Project>{63BC5F91-C1F2-9873-F505-A07B51EB7E59}</Project>
+      <Project>{E6ED74F3-B805-F0D3-6459-A186BF4ACBEF}</Project>
       <Name>Unity.XR.ARSubsystems.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Management.csproj">
-      <Project>{E0EAF8A4-0B62-2B96-6378-2931DA718DA7}</Project>
+      <Project>{980071E7-66CC-5F5A-351C-BD366C907522}</Project>
       <Name>Unity.XR.Management</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{302C866E-978E-14ED-2A81-1358B82A6F52}</Project>
+      <Project>{B8F94296-CE50-0B5F-FC91-005A6D74452B}</Project>
       <Name>Unity.Mathematics.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARSubsystems.csproj">
-      <Project>{E2289832-711E-9CCF-3FE4-012F3C0171E3}</Project>
+      <Project>{CE233DF2-4F95-5200-E767-DA9052A033AE}</Project>
       <Name>Unity.XR.ARSubsystems</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.ARKit.FaceTracking.csproj">
-      <Project>{676E0638-FA83-D2D6-51AD-2CB3DDC9F0C7}</Project>
-      <Name>Unity.XR.ARKit.FaceTracking</Name>
+    <ProjectReference Include="Facebook.Wit.TTS.csproj">
+      <Project>{8FD47041-AA3A-005E-8621-7BD656796E07}</Project>
+      <Name>Facebook.Wit.TTS</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARCore.csproj">
-      <Project>{5BC500EC-C1F1-6BC2-C3B9-80C26AE5DA8A}</Project>
+      <Project>{33DA921C-6043-A242-9A71-20120BEEEB4F}</Project>
       <Name>Unity.XR.ARCore</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARFoundation.Editor.csproj">
-      <Project>{B8AD57FE-447E-F5CA-8D45-F90A5BB983EB}</Project>
+      <Project>{D8E5CABD-72BE-BD3D-8AAE-462482950244}</Project>
       <Name>Unity.XR.ARFoundation.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Tutorials.Core.csproj">
-      <Project>{F2A8F3A5-A4D7-CCDF-A25F-DD75DFA2DA9E}</Project>
-      <Name>Unity.Tutorials.Core</Name>
+    <ProjectReference Include="Facebook.Wit.TTS.Editor.csproj">
+      <Project>{95A4B903-6473-4E84-B89E-594CED85F659}</Project>
+      <Name>Facebook.Wit.TTS.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{372A2A71-4452-DFF0-73F4-1B3580F2695D}</Project>
+      <Project>{6DFF87A7-3555-A583-DA7A-35A30D578FC3}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.ARKit.csproj">
-      <Project>{123348D9-F8AE-E610-E85A-0DEE6F23DAEA}</Project>
-      <Name>Unity.XR.ARKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.007.csproj">
-      <Project>{BFEA33AB-9DA1-1B3D-904B-BF4706B9597A}</Project>
-      <Name>Unity.InternalAPIEditorBridge.007</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{FCBF9A55-45EC-2DBF-2CF0-4C02823E45F5}</Project>
+      <Project>{92C59B66-74F7-1FD2-8BAB-4157F913CBCE}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="PPv2URPConverters.csproj">
-      <Project>{B451CED3-F9FE-36B0-6FF5-B12B6025FC71}</Project>
+      <Project>{ECDDA442-AC32-078D-0C6A-0734CD0142E5}</Project>
       <Name>PPv2URPConverters</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{A20291FE-FB24-799E-A2F3-82C5770A5502}</Project>
+      <Project>{07C7292D-DDDB-4D51-687F-4FABC320414D}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.csproj">
-      <Project>{EF2596A6-FC92-7027-D189-3DF8AA14BC56}</Project>
-      <Name>Unity.XR.OpenXR.Features.OculusQuestSupport.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.XR.Management.Editor.csproj">
-      <Project>{73015876-D075-2502-AFFA-8BC6EE9D60FF}</Project>
+      <Project>{8FC970AE-108C-6816-936E-8C6B4E5158D3}</Project>
       <Name>Unity.XR.Management.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{EA7DF95F-112D-81F8-327C-BEA5B0669396}</Project>
+      <Project>{1B5AD1BE-284E-E9E6-CE3F-1F0ED022C198}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.ARKit.FaceTracking.Editor.csproj">
-      <Project>{5A29D7E4-09F7-FC3E-346D-DA168CFC3D6C}</Project>
-      <Name>Unity.XR.ARKit.FaceTracking.Editor</Name>
+    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
+      <Project>{4B5FFD83-2977-F275-C6A6-0643AED86506}</Project>
+      <Name>Unity.VisualScripting.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{2C803191-3FB2-C1D5-CB7D-971CC019C257}</Project>
+      <Project>{CAA80F9E-6826-28CB-1326-13E390E74D9B}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Editor.csproj">
-      <Project>{667EB7CA-E38E-C2EC-D543-178FADB70088}</Project>
+      <Project>{FBCE1E2F-B599-1713-08B2-0355CA8CA06D}</Project>
       <Name>Unity.Burst.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{7BEF3E18-8908-619D-C6A6-5628DCDB6B95}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{FAF4E929-F132-6FFF-DAB7-B95F1CF2E024}</Project>
+      <Project>{6CCA8B5A-1A29-FFBA-3D9B-66678A019261}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Subsystem.Registration.csproj">
-      <Project>{C59BA1CD-08FB-9FD6-05A7-FE8AE3DAA5C9}</Project>
+      <Project>{44DD35A7-CF1E-113F-1FB0-04A97095B670}</Project>
       <Name>Unity.Subsystem.Registration</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{683A3267-C07D-05E4-62C1-3A7EF74C0BE1}</Project>
+      <Project>{C624A5D5-A366-7298-F94E-61DEAA3EF403}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{9B88F9E4-7262-52AB-C881-ABD9C37E0BEF}</Project>
+      <Project>{A7F93707-2E5F-3B43-9780-154D0C22173F}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.csproj">
-      <Project>{24DF457F-7523-8058-9D37-2498B8AA2769}</Project>
-      <Name>Unity.XR.OpenXR.Features.OculusQuestSupport</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Tutorials.Core.Editor.csproj">
-      <Project>{04212105-4A5E-B774-435F-CFEF8A5CB287}</Project>
-      <Name>Unity.Tutorials.Core.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.csproj">
-      <Project>{20EAB395-E536-1F0A-3081-50B4570DBEB9}</Project>
+      <Project>{6F0AFB51-C2B3-B258-9A7A-F8452C335890}</Project>
       <Name>Unity.Services.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{A44939E8-1F2D-56ED-0FBC-6E347B1F475F}</Project>
+      <Project>{7C9752B9-7DFC-406B-192C-89720DF0FF4E}</Project>
       <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.XR.MagicLeap.csproj">
-      <Project>{C0792F56-308C-01A7-181A-252F663BC8B3}</Project>
-      <Name>UnityEngine.XR.MagicLeap</Name>
+    <ProjectReference Include="Facebook.Wit.Conduit.Editor.csproj">
+      <Project>{B9587545-37E4-E964-66A3-2593E2680D30}</Project>
+      <Name>Facebook.Wit.Conduit.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{96D5C17B-F7F8-8446-1D30-217E376A1EAF}</Project>
+      <Project>{AAF3E0F1-0EDE-A615-AA01-BCF69580AC23}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="ReqRep.csproj">
+      <Project>{D18BB3B3-404E-6749-9DA1-30B6787CCAB7}</Project>
+      <Name>ReqRep</Name>
+    </ProjectReference>
+    <ProjectReference Include="VoiceSDK.Editor.csproj">
+      <Project>{5602FB85-38BF-1F46-ADDA-78A810A98225}</Project>
+      <Name>VoiceSDK.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
-      <Project>{3BDF343B-0C44-2CDC-5083-96391D519B2A}</Project>
+      <Project>{69AA9DB7-355E-8C26-EB9A-3D6F9A492152}</Project>
       <Name>Unity.Services.Core.Analytics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{F30C404E-C847-6500-4FB1-100A0CD562F8}</Project>
+      <Project>{A1BE5AC8-0986-11CF-B1B4-F48AB954EE27}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{C133CBE8-2993-98FB-DC31-17FCB714A105}</Project>
+      <Project>{2738A28F-A6EC-3A14-03AC-F691D6581872}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.XR.MagicLeap.csproj">
-      <Project>{48992199-39C6-43CC-B1E5-6E36076D5110}</Project>
-      <Name>UnityEditor.XR.MagicLeap</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
-      <Project>{04BCCDDA-94EA-B202-7FBF-582E6E318B3C}</Project>
+      <Project>{B01B1A0B-BA6E-58FE-24F9-F42DC871B0A4}</Project>
       <Name>UnityEngine.XR.LegacyInputHelpers</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{93E62476-97C7-EED9-182D-C62F52932184}</Project>
+      <Project>{8AC1ABAC-3581-2D74-E176-5DB49084CE33}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.OpenXR.Editor.csproj">
-      <Project>{3960AF43-6E0F-57EC-E43A-5DE8A8C42910}</Project>
-      <Name>Unity.XR.OpenXR.Editor</Name>
+    <ProjectReference Include="Facebook.Wit.Editor.csproj">
+      <Project>{6779B543-15B8-AFBA-C44D-846F8DB715D6}</Project>
+      <Name>Facebook.Wit.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Environments.csproj">
-      <Project>{06825169-A82F-49CD-C834-80CA05DD2382}</Project>
+      <Project>{17E4766A-C65D-FFF3-6789-48511C7CA163}</Project>
       <Name>Unity.Services.Core.Environments</Name>
     </ProjectReference>
+    <ProjectReference Include="VoiceSDK.Dictation.Editor.csproj">
+      <Project>{96E13239-7833-1333-88A4-A2A766ED57A4}</Project>
+      <Name>VoiceSDK.Dictation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="VoiceSDK.Dictation.Runtime.csproj">
+      <Project>{A51768C5-73C2-CD73-1248-CE221E077577}</Project>
+      <Name>VoiceSDK.Dictation.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{FCF9235C-1A06-1854-C20C-2B7BEF1D3098}</Project>
+      <Project>{E8E5796C-6BE5-E7E5-0EEF-D48D0D193B49}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{1BC6DCFA-338D-B0B5-A454-8DBDF24CE269}</Project>
+      <Project>{B0043883-86DA-7913-0C1C-85FD4542D76D}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
-      <Project>{19F1360D-C85D-37EC-A93D-078AB16BBD15}</Project>
+      <Project>{1623355E-C119-71B5-8D3B-11750B44F86A}</Project>
       <Name>UnityEditor.XR.LegacyInputHelpers</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.OpenXR.csproj">
-      <Project>{FB8D7602-3747-FAE9-A074-C0241A6BC4CA}</Project>
-      <Name>Unity.XR.OpenXR</Name>
+    <ProjectReference Include="Facebook.Wit.TTS.Samples.csproj">
+      <Project>{B25DB903-9B95-DF6B-21CE-6A58AA34EBE6}</Project>
+      <Name>Facebook.Wit.TTS.Samples</Name>
+    </ProjectReference>
+    <ProjectReference Include="VoiceSDK.Runtime.csproj">
+      <Project>{D1E0FB2B-04E0-E1F8-02F2-3CEF0E11A41A}</Project>
+      <Name>VoiceSDK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
-      <Project>{8B45FB16-CCD4-E49D-63EE-A9F9C047F002}</Project>
+      <Project>{B3A90670-E23C-9268-421F-AE13F7A82823}</Project>
       <Name>UnityEditor.SpatialTracking</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
-      <Project>{8917A894-7107-CCC6-B6DC-496F3A150F04}</Project>
+      <Project>{3865FD74-7930-251F-452C-573C07720536}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.OpenXR.Features.ConformanceAutomation.csproj">
-      <Project>{F8534B84-E505-E22E-628E-6F0F2870E01B}</Project>
-      <Name>Unity.XR.OpenXR.Features.ConformanceAutomation</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{FA82E939-549C-4C41-703F-465E5B81EED2}</Project>
+      <Project>{746F8B16-04C6-76E5-976D-F5B38C91307D}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.csproj">
-      <Project>{6296ADFC-F271-5A8B-E36C-721FE90A7126}</Project>
-      <Name>Unity.XR.OpenXR.Features.RuntimeDebugger.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{B2C1AD22-A226-5A91-7E00-03DC610A1E88}</Project>
+      <Project>{27EC6178-B8C5-493C-3AFD-BA8EB393D037}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARFoundation.csproj">
-      <Project>{280EDF72-300A-BCD4-833F-B01473B4E5A0}</Project>
+      <Project>{A6AFA90B-6D95-4517-8FB7-6485F11853F2}</Project>
       <Name>Unity.XR.ARFoundation</Name>
     </ProjectReference>
   </ItemGroup>

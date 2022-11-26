@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4871016117619999449}
   - component: {fileID: 4871016117619999446}
   - component: {fileID: 4871016117619999447}
+  - component: {fileID: 859187991388699034}
   - component: {fileID: 4871016117619999444}
   m_Layer: 0
   m_Name: SpawFrame Variant
@@ -46,12 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553a41c63c8d642d280e56e04a5da8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FrameToSpawn1: {fileID: 2173352417664038655, guid: 91ecee5475f1e46cba71926b1a44e405,
-    type: 3}
-  _FrameToSpawn2: {fileID: 2173352417664038655, guid: 8225fada58de14c1dbccb3e085aa18dd,
-    type: 3}
-  outsideCube: {fileID: 215703626722822460, guid: 8b6ad610dbe2845139f97999a055e373,
-    type: 3}
+  _FrameToSpawn1: {fileID: 2173352417664038655, guid: 91ecee5475f1e46cba71926b1a44e405, type: 3}
+  _FrameToSpawn2: {fileID: 2173352417664038655, guid: 8225fada58de14c1dbccb3e085aa18dd, type: 3}
+  outsideCube: {fileID: 215703626722822460, guid: 8b6ad610dbe2845139f97999a055e373, type: 3}
   size: 4
   frame_size: 1
   senti_average: 0
@@ -69,9 +67,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfefc479809354aaf9afb2d51be85868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ObjectToSpawn: {fileID: 8616972492296602952, guid: 61e86b1cba6bb4a859dd5490424bb6dd,
-    type: 3}
+  _ObjectToSpawn: {fileID: 8616972492296602952, guid: 61e86b1cba6bb4a859dd5490424bb6dd, type: 3}
   r: 4
+--- !u!114 &859187991388699034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4871016117619999448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5d348e0bcd31b449ba5a267fac8591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 0}
 --- !u!114 &4871016117619999444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e952fd6ca469e46cca3b38cc0908172c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
   syllables_all: 
   senti_all: []
   sentence_all: []
