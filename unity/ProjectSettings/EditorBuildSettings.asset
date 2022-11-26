@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CustomDemo.unity
     guid: 24dadbfa224634e47ad6763c9d9eefd4
+  - enabled: 1
+    path: Assets/Scenes/Merge_CustomDemo_ImagePicker.unity
+    guid: 437663a4c8149bd438ce4fb521356913
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e9849194bf949de459597db188dfa1ee, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a33a9766dedb61049a7fd1583ce8c4fe, type: 2}

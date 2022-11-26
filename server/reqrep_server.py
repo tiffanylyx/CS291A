@@ -1,3 +1,4 @@
+import json
 import time
 import random
 import zmq
@@ -21,10 +22,11 @@ while True:
     print(f"Received request: {message_rx}")
 
     #  reply to client
-    message = analyze_sentence(sentence_list)
-    print(message)
+    data = analyze_sentence(sentence_list)
+    print(data)
 
     # add chatbot response
-    message[DIALOG_KEY] = bot(sentence_list)
+    data[DIALOG_KEY] = bot(sentence_list)
 
-    socket.send_string(message)
+    json_data = json.dumps(data)
+    socket.send_string(json_data)

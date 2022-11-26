@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\AudioPoint.cs" />
     <Compile Include="Assets\Scripts\CustomInteractionHandler.cs" />
     <Compile Include="Assets\Scripts\AudioRandomMesh.cs" />
+    <Compile Include="Assets\Scripts\ImagePicker\ImagePicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1036,6 +1037,14 @@
     <ProjectReference Include="Unity.XR.ARFoundation.csproj">
       <Project>{F62A8E43-8BCF-6ECB-8E85-60256F380BA4}</Project>
       <Name>Unity.XR.ARFoundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeFilePicker.Runtime.csproj">
+      <Project>{D04FDFCB-4EBC-F5E3-3FFD-351015BC5CA2}</Project>
+      <Name>NativeFilePicker.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeFilePicker.Editor.csproj">
+      <Project>{459F0E38-5342-2B69-BA3A-BABE76655D6D}</Project>
+      <Name>NativeFilePicker.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

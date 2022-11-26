@@ -243,7 +243,7 @@ def analyze_sentence(sentence_list):
     for index, sentence in enumerate(sentence_list):
         res = main_analyzer(sentence)
         res_all_sentence[index] = res
-    return json.dumps(res_all_sentence)
+    return res_all_sentence
 
 
 def main_analyzer(sentence):
