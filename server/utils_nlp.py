@@ -12,7 +12,6 @@ import numpy as np
 import nltk
 from nltk import *
 
-
 from gensim.test.utils import common_texts
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 
@@ -21,7 +20,6 @@ from textblob import TextBlob
 import random
 
 from math import sqrt
-
 
 import transformers
 
@@ -33,7 +31,6 @@ import time
 import json
 
 from nltk.corpus import cmudict
-from nltk.chat.eliza import eliza_chatbot
 
 
 # This function is used to clean the sentence
@@ -49,13 +46,16 @@ def pre_process_sentence(sentence):
     sentence2 = str(sentence1.correct())
     return sentence2
 
+
 def mean_pooling(model_output, attention_mask):
-    token_embeddings = model_output[0] #First element of model_output contains all token embeddings
+    token_embeddings = model_output[0]  # First element of model_output contains all token embeddings
     input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
     return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
+
 csv_model = transformers.AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
 csv_tokenizer = transformers.AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
+
 
 # This function is used to compute 3D sentence vector
 def compute_sent_vec(sentence, pca3_sentenceVec):
@@ -65,7 +65,7 @@ def compute_sent_vec(sentence, pca3_sentenceVec):
     sentence_embeddings = mean_pooling(model_output, encoded_input['attention_mask'])
     sentence_embeddings = F.normalize(sentence_embeddings, p=2, dim=1)
     res = pca3_sentenceVec.transform(sentence_embeddings)[0]
-    normalized_res = res/np.linalg.norm(res)
+    normalized_res = res / np.linalg.norm(res)
     return normalized_res
 
 
@@ -76,58 +76,64 @@ def compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, dim):
     for word in tokens:
         try:
             vector = model_word.wv[word]
-            if dim==2:
+            if dim == 2:
                 res = pca2.transform([vector])[0]
-            elif dim==3:
+            elif dim == 3:
                 res = pca3.transform([vector])[0]
-            elif dim==4:
+            elif dim == 4:
                 res = pca4.transform([vector])[0]
         except:
-            res = [random.random(),random.random(),random.random()]
-        normalized_res = res/np.linalg.norm(res)
+            res = [random.random(), random.random(), random.random()]
+        normalized_res = res / np.linalg.norm(res)
         res_vec.append(normalized_res.tolist())
 
     return res_vec
 
+
 # This sentence is to compute the Parts of Speech
 def compute_sent_parts(sentence):
     tokens = nltk.tokenize.word_tokenize(sentence)
-    res = nltk.pos_tag(tokens,tagset='universal')
+    res = nltk.pos_tag(tokens, tagset='universal')
     noun_count = 0
     verb_count = 0
     for i in res:
-        if i[1]=='NOUN':
-            noun_count+=1
-        elif i[1]=='VERB':
-            verb_count+=1
-    return noun_count,verb_count
+        if i[1] == 'NOUN':
+            noun_count += 1
+        elif i[1] == 'VERB':
+            verb_count += 1
+    return noun_count, verb_count
+
 
 # To compute the word length
 def compute_word_length(word):
     return len(word)
 
+
 # To compute the sentence sentiment value
 def compute_sent_sentiment(sentence):
     res = TextBlob(sentence)
     sentiment = res.sentiment.polarity
-    sentiment = (sentiment + 1)/2
+    sentiment = (sentiment + 1) / 2
     return sentiment
+
 
 def compute_sent_length(sentence):
     tokens = nltk.tokenize.word_tokenize(sentence)
     return len(tokens)
+
 
 def flat(nums):
     count = 0
     res = []
     for i in nums:
         if isinstance(i, list):
-            count+=1
+            count += 1
             res.extend(flat(i))
         else:
             res.append(i)
 
     return res
+
 
 # To compute the sentence structure based on the grammer
 def get_cfg_structure(sentence):
@@ -144,26 +150,26 @@ def get_cfg_structure(sentence):
     ADJ_string = "ADJ -> "
     sent = nltk.tokenize.word_tokenize(sentence)
 
-    res = nltk.pos_tag(sent,tagset='universal')
+    res = nltk.pos_tag(sent, tagset='universal')
     for i in res:
         if i[1] == "NOUN":
-            N_string+="\"" + i[0]+"\""  + "|"
+            N_string += "\"" + i[0] + "\"" + "|"
         elif i[1] == "PRON":
-            N_string+="\"" + i[0]+"\""  + "|"
+            N_string += "\"" + i[0] + "\"" + "|"
         elif i[1] == "DET":
-            Det_string+="\"" + i[0]+"\""  + "|"
+            Det_string += "\"" + i[0] + "\"" + "|"
         elif i[1] == "VERB":
-            V_string+="\"" + i[0]+"\""  + "|"
+            V_string += "\"" + i[0] + "\"" + "|"
         elif i[1] == "ADP":
-            P_string+="\"" + i[0]+"\""  + " |"
+            P_string += "\"" + i[0] + "\"" + " |"
         elif i[1] == "ADJ":
-            ADJ_string+="\"" + i[0]+"\""  + " |"
+            ADJ_string += "\"" + i[0] + "\"" + " |"
 
-    CFG_string = CFG_string + N_string + "\n" + P_string + "\n" + Det_string +"\n" +  V_string + "\n" + ADJ_string
+    CFG_string = CFG_string + N_string + "\n" + P_string + "\n" + Det_string + "\n" + V_string + "\n" + ADJ_string
     grammar1 = CFG.fromstring(CFG_string)
     sent_clean = []
     for i in sent:
-        if "\""+i+"\"" in CFG_string:
+        if "\"" + i + "\"" in CFG_string:
             sent_clean.append(i)
 
     parser = nltk.ChartParser(grammar1)
@@ -179,27 +185,29 @@ def get_cfg_structure(sentence):
             for i in res:
                 res_key[i] = []
                 res_key[i].append(1)
-            if len(res)>1:
+            if len(res) > 1:
                 for sub_part in part:
                     res = flat(sub_part)
                     for i in res:
                         res_key[i].append(2)
-                    if len(res)>1:
+                    if len(res) > 1:
                         for sub_sub_part in sub_part:
                             res = flat(sub_sub_part)
                         for i in res:
                             res_key[i].append(3)
 
+    return word_parts, res_key
 
-    return word_parts,res_key
+
 '''
 def compute_co_reference(sentence):
     prediction = predictor.predict(document=sentence)  # get prediction
     return prediction['clusters']
 '''
 
+
 # to compute the syllables of each word in a sentence
-def compute_syllables(sentence,d):
+def compute_syllables(sentence, d):
     tokens = nltk.tokenize.word_tokenize(sentence)
     res_all = []
     for word in tokens:
@@ -215,6 +223,7 @@ def compute_syllables(sentence,d):
         res_all.append(list_res)
     return res_all
 
+
 d = cmudict.dict()
 script_dir = os.path.dirname(__file__)
 with open(os.path.join(script_dir, 'model/pca4.pkl'), 'rb') as pickle_file:
@@ -229,38 +238,29 @@ with open(os.path.join(script_dir, 'model/pca3_sentenceVec_transformer.pkl'), 'r
 model_word = Word2Vec.load(os.path.join(script_dir, "model/word2vec_text8.model"))
 
 
-def analyze_sentence_eliza(sentence_list):
+def analyze_sentence(sentence_list):
     res_all_sentence = {}
     for index, sentence in enumerate(sentence_list):
         res = main_analyzer(sentence)
-        res['eliza'] = eliza_chatbot.respond(sentence)
         res_all_sentence[index] = res
     return json.dumps(res_all_sentence)
 
-
-def analyze_sentence(sentence_list):
-    res_all_sentence = {}
-    for index,sentence in enumerate(sentence_list):
-        res = main_analyzer(sentence)
-        res_all_sentence[index] = res
-
-    return json.dumps(res_all_sentence)
 
 def main_analyzer(sentence):
     all_result = {}
     sentence = pre_process_sentence(sentence)
-    syllables = compute_syllables(sentence,d)
-    #cfg = get_cfg_structure(sentence)
+    syllables = compute_syllables(sentence, d)
+    # cfg = get_cfg_structure(sentence)
     senti = compute_sent_sentiment(sentence)
-    noun_count,verb_count = compute_sent_parts(sentence)
+    noun_count, verb_count = compute_sent_parts(sentence)
 
-    word_vec =  compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, 3)
+    word_vec = compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, 3)
 
     sent_vec = compute_sent_vec(sentence, pca3_sentenceVec)
     all_result['syllables'] = len(syllables)
-    #all_result['cfg'] = cfg
+    # all_result['cfg'] = cfg
     all_result['senti'] = senti
-    #all_result['pos'] = pos
+    # all_result['pos'] = pos
     all_result['word_vec'] = word_vec
     all_result['sent_vec'] = [vec.tolist() for vec in sent_vec]
     all_result['sentence'] = sentence
@@ -268,17 +268,16 @@ def main_analyzer(sentence):
     all_result['noun'] = noun_count
     all_result['verb'] = verb_count
 
-
     return all_result
 
 
 if __name__ == '__main__':
     sentence_list = ['this is a demo',
-    'i am happy to meet you today',
-    'i went to the museum with my best friend',
-    'it is a beautiful day for me',
-    'i am going through a hard day',
-    'too many dealines are approaching and i cannot finish everything']
+                     'i am happy to meet you today',
+                     'i went to the museum with my best friend',
+                     'it is a beautiful day for me',
+                     'i am going through a hard day',
+                     'too many dealines are approaching and i cannot finish everything']
     res = analyze_sentence(sentence_list)
     with open('mydata.json', 'w') as f:
         f.write(res)
