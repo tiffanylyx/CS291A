@@ -451,7 +451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eliza Responses
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: c2fa6e6103a14be428cc0dd0635cb1d1, type: 2}
@@ -658,20 +658,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6751265145851803708, guid: bf48ad39fdad25049a2a4aa41e9ed16d, type: 3}
   m_PrefabInstance: {fileID: 1252806076}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &677412972
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677412967}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 8, y: 8, z: 8}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &677412973
+--- !u!114 &677412979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -683,7 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5d348e0bcd31b449ba5a267fac8591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 0}
+  label: {fileID: 335091771}
 --- !u!1 &737401904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,7 +1468,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1568499883814978430, guid: bf48ad39fdad25049a2a4aa41e9ed16d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bf48ad39fdad25049a2a4aa41e9ed16d, type: 3}
 --- !u!1 &1270875886
 GameObject:
@@ -2133,8 +2121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 507.8507, y: -114}
-  m_SizeDelta: {x: 1015.7014, y: 50}
+  m_AnchoredPosition: {x: 507.88672, y: -114}
+  m_SizeDelta: {x: 1015.77344, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2119246254
 CanvasRenderer:

@@ -29,8 +29,8 @@ public class loadJSON : MonoBehaviour
     string sentence;
     Vector3 sent_vec;
 
-    private const string ElizaResponseKey = "eliza";
-    public string ElizaResponse = String.Empty;
+    private const string ChatbotResponseKey = "dialog";
+    public string ChatbotResponse = String.Empty;
 
     float[] sent_vec1;
 
@@ -45,7 +45,7 @@ public class loadJSON : MonoBehaviour
         Debug.Log("Parse");
         try
         {
-            ElizaResponse = String.Empty;
+            ChatbotResponse = String.Empty;
             sent_vec1 = new float[3];
             var uni = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json);
             foreach (var item in uni)
@@ -78,9 +78,9 @@ public class loadJSON : MonoBehaviour
                 sent_vec_all.Add(sent_vec);
 
 
-                Debug.Log($"parsing {item} eliza");
-                ElizaResponse += item.Value[ElizaResponseKey].ToString() +  " ";
-                Debug.Log($"parsing {item} eliza ok");
+                Debug.Log($"parsing {item} chatbot");
+                ChatbotResponse += item.Value[ChatbotResponseKey].ToString() +  " ";
+                Debug.Log($"parsing {item} chatbot ok");
 
             }
             number = sent_vec_all.Count;
@@ -90,7 +90,7 @@ public class loadJSON : MonoBehaviour
         }
         catch (Exception e)
         {
-            ElizaResponse = e.ToString();
+            ChatbotResponse = e.ToString();
             OnChange.Invoke();
             Debug.LogError(e.ToString());
         }

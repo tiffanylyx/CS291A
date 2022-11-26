@@ -67,7 +67,7 @@
     <Compile Include="Assets\Scripts\loadJSON.cs" />
     <Compile Include="Assets\Scripts\FrequencyBandAnalyser.cs" />
     <Compile Include="Assets\Scripts\AudioShapeSurface.cs" />
-    <Compile Include="Assets\Scripts\Chat\ElizaDisplay.cs" />
+    <Compile Include="Assets\Scripts\Chat\ChatbotDisplay.cs" />
     <Compile Include="Assets\Scripts\FFTObjectV2.cs" />
     <Compile Include="Assets\Scripts\FFTObjectArray.cs" />
     <Compile Include="Assets\Scripts\FFTLine.cs" />

@@ -65,8 +65,8 @@ namespace Oculus.Voice.Demo
             appVoiceExperience.enabled = true;
         }
 
-		private void Start()
-		{
+        private void Start()
+        {
             //ReqRep.EventManager.Instance.onResponse.AddListener(ProcessResponse);
         }
 
@@ -155,6 +155,7 @@ namespace Oculus.Voice.Demo
         {
             SetActivation(!_active);
         }
+
         // Set activation
         public void SetActivation(bool toActivated)
         {
@@ -175,10 +176,10 @@ namespace Oculus.Voice.Demo
         private void StartSTT()
         {
             StartCoroutine(StartSTT2());
-		}
+        }
 
         private IEnumerator StartSTT2()
-		{
+        {
             yield return new WaitForSeconds(0.505f);
             if (!_active)
             {
