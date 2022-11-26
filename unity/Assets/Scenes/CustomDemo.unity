@@ -451,7 +451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...
+  m_text: adefasdfasdf
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: c2fa6e6103a14be428cc0dd0635cb1d1, type: 2}
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 2426
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -1514,6 +1514,10 @@ PrefabInstance:
       propertyPath: shader
       value: 
       objectReference: {fileID: -6465566751694194690, guid: 6a41d3450ae1546a39358c7efd8c8442, type: 3}
+    - target: {fileID: 6751265145851803699, guid: bf48ad39fdad25049a2a4aa41e9ed16d, type: 3}
+      propertyPath: shader
+      value: 
+      objectReference: {fileID: -6465566751694194690, guid: da5b0bd7382ff6d4a936cf1055a67d6d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf48ad39fdad25049a2a4aa41e9ed16d, type: 3}
 --- !u!1 &1270875886

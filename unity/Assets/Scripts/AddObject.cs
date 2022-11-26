@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AddObject : MonoBehaviour
 {
+    public Shader shader;
     public GameObject _ObjectToSpawn;
 
     Vector3 positions;
@@ -26,6 +27,7 @@ public class AddObject : MonoBehaviour
     Vector3 sent_vec;
 
     private loadJSON parser;
+    private readonly List<GameObject> graphics = new List<GameObject>();
 
 
     void Start()
@@ -34,8 +36,16 @@ public class AddObject : MonoBehaviour
         parser.OnChange.AddListener(GenerateGraphics);
     }
 
+    private void ClearGraphics()
+    {
+        foreach (var item in graphics)
+            Destroy(item);
+        graphics.Clear();
+    }
+
     private void GenerateGraphics()
     {
+        ClearGraphics();
         sent_vec_all = parser.sent_vec_all;
 
         senti_all = parser.senti_all;
@@ -97,6 +107,7 @@ public class AddObject : MonoBehaviour
             newFFTObject.transform.localPosition = positions;
             newFFTObject.transform.rotation = Quaternion.Euler(quaternions);
             newFFTObject.transform.localScale = new Vector3((float)sent_length / 5.0f, (float)sent_length / 5.0f, (float)sent_length / 5.0f);
+            graphics.Add(newFFTObject);
 
             if (i <= 1)
             {
@@ -106,12 +117,10 @@ public class AddObject : MonoBehaviour
             {
                 newFFTObject.GetComponent<AudioShapeSurface>().shape = i + 2;
             }
-            Material material = new Material(Shader.Find("Shader Graphs/GlassShader"));
+            Material material = new Material(shader);
             material.SetColor("_TintColor", customColor);
             //Material material = newFFTObject.GetComponent<MeshRenderer>().sharedMaterial;
             newFFTObject.GetComponent<MeshRenderer>().material = material;
-
         }
-
     }
 }

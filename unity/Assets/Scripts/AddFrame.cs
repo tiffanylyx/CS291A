@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class AddFrame : MonoBehaviour
 {
+    public Shader shader;
     public GameObject _FrameToSpawn1;
     public GameObject _FrameToSpawn2;
     public GameObject outsideCube;
+
     List<float> senti_all;
     Vector3 positions;
     public int size;
@@ -20,9 +22,9 @@ public class AddFrame : MonoBehaviour
     int wordCount;
     int nounCount;
     int verbCount;
+    
     private loadJSON parser;
-
-    public Shader shader;
+    private readonly List<GameObject> graphics = new List<GameObject>();
 
 
     // Start is called before the first frame update
@@ -32,8 +34,17 @@ public class AddFrame : MonoBehaviour
         parser.OnChange.AddListener(GenerateGraphics);
     }
 
+    private void ClearGraphics()
+    {
+        foreach (var item in graphics)
+            Destroy(item);
+        graphics.Clear();
+    }
+
     private void GenerateGraphics()
     {
+        ClearGraphics();
+
         wordCount = parser.wordCount;
         nounCount = parser.nounCount;
         verbCount = parser.verbCount;
@@ -45,19 +56,14 @@ public class AddFrame : MonoBehaviour
         for (int i = 0; i < senti_all.Count; i++)
         {
             senti_average += senti_all[i];
-
         }
         senti_average = senti_average / senti_all.Count;
 
         GameObject cube = Instantiate(outsideCube);
         cube.transform.SetParent(transform);
-
-        //var shader = Shader.Find("Shader Graphs /Grid Shadergraph 1");
         Material material = new Material(shader);
-
-
         Color customColor = Color.HSVToRGB(senti_average, senti_average / 3, senti_average / 2);
-        
+
         material.SetColor("_BaseColor", customColor);
         cube.GetComponent<MeshRenderer>().material = material;
 
@@ -71,6 +77,7 @@ public class AddFrame : MonoBehaviour
                     GameObject newFFTObject = Instantiate(_FrameToSpawn1);
                     newFFTObject.transform.SetParent(transform);
                     newFFTObject.transform.localPosition = new Vector3(-size, r - size + frame_size / 2, c - size + frame_size / 2);
+                    graphics.Add(newFFTObject);
                 }
                 p2 = Random.Range(0.0f, 1.0f);
                 if (p2 < spawn_prob1)
@@ -78,6 +85,7 @@ public class AddFrame : MonoBehaviour
                     GameObject newFFTObject = Instantiate(_FrameToSpawn1);
                     newFFTObject.transform.SetParent(transform);
                     newFFTObject.transform.localPosition = new Vector3(size, r - size + 0.5f, c - size + 0.5f);
+                    graphics.Add(newFFTObject);
                 }
                 p3 = Random.Range(0.0f, 1.0f);
                 if (p3 < spawn_prob2)
@@ -85,6 +93,7 @@ public class AddFrame : MonoBehaviour
                     GameObject newFFTObject = Instantiate(_FrameToSpawn2);
                     newFFTObject.transform.SetParent(transform);
                     newFFTObject.transform.localPosition = new Vector3(r - size + 0.5f, c - size + 0.5f, size);
+                    graphics.Add(newFFTObject);
                 }
                 p4 = Random.Range(0.0f, 1.0f);
                 if (p4 < spawn_prob2)
@@ -92,9 +101,9 @@ public class AddFrame : MonoBehaviour
                     GameObject newFFTObject = Instantiate(_FrameToSpawn2);
                     newFFTObject.transform.SetParent(transform);
                     newFFTObject.transform.localPosition = new Vector3(r - size + 0.5f, c - size + 0.5f, -size);
+                    graphics.Add(newFFTObject);
                 }
             }
-
         }
     }
 }
