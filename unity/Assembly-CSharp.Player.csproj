@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{61BBA692-C04A-5CD9-383D-F53D00327426}</ProjectGuid>
+    <ProjectGuid>{3AEF80CC-8A22-9A5D-7F52-703775D28CC9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -692,147 +692,147 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
-      <Project>{3A4AEE2C-B588-B382-5B35-0E5CCB622EE6}</Project>
+      <Project>{0FD0777D-E02B-1AAE-6AE0-1ED8E9BF30CE}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Voice.Demo.Player.csproj">
-      <Project>{D1DCA00B-F261-6737-EEB2-B10A319CF091}</Project>
+      <Project>{5663B930-61F3-E349-0EBA-88130DDA4C92}</Project>
       <Name>Oculus.Voice.Demo.Player</Name>
     </ProjectReference>
     <ProjectReference Include="AssistantCoreSDKRuntime.Player.csproj">
-      <Project>{50E57A57-D8F4-6EAD-D3C8-29998FF7989B}</Project>
+      <Project>{0D48E3F5-90F0-2217-4D8B-87346D471BA7}</Project>
       <Name>AssistantCoreSDKRuntime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Facebook.Wit.Conduit.Player.csproj">
-      <Project>{290AC758-9E5B-3698-2761-3951E2BCD075}</Project>
+      <Project>{A2B1F940-027C-91E9-295D-E9B1B5DB8106}</Project>
       <Name>Facebook.Wit.Conduit.Player</Name>
     </ProjectReference>
     <ProjectReference Include="LitJson.Player.csproj">
-      <Project>{F9063781-409F-5FC8-E357-7083A5B51940}</Project>
+      <Project>{F0EFC1F7-06F2-A438-D932-1B60814A1FC8}</Project>
       <Name>LitJson.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
-      <Project>{261A0A1D-B662-F1FF-8B93-CBAB813E93F1}</Project>
+      <Project>{594084D6-892C-D57E-FF8A-C2A9BE0C6DF9}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.SpatialTracking.Player.csproj">
-      <Project>{E8CC442C-94DA-BF37-5917-E36B31902EF6}</Project>
+      <Project>{E5ABC2D9-6DCE-8039-FCEA-4A0ECD73F288}</Project>
       <Name>UnityEngine.SpatialTracking.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{B7E9F3B7-9D02-FD4F-15C0-CD34039BD408}</Project>
+      <Project>{D7FCE128-F15E-0C58-61D2-8C5DDC628DA0}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Facebook.WitAI.Player.csproj">
-      <Project>{E7A394C2-DEF7-26ED-A784-462B9E10496F}</Project>
+      <Project>{E8C64154-278B-DBAB-874B-23C699F150A5}</Project>
       <Name>Facebook.WitAI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="PubSub.Player.csproj">
-      <Project>{AEC010EB-EAA4-237F-4193-4D94C03D83B6}</Project>
+      <Project>{B9B61A70-F7BD-D00E-3788-CAF9E8485F56}</Project>
       <Name>PubSub.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Facebook.Wit.Dictation.Player.csproj">
-      <Project>{683B9057-B8C0-9890-DA07-94E785537743}</Project>
+      <Project>{41869A14-66FF-94D9-4CFF-CB3D19D88A5B}</Project>
       <Name>Facebook.Wit.Dictation.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
-      <Project>{19D2BB0E-53E5-6E35-2571-38B540632C57}</Project>
+      <Project>{425B1D1E-3AF9-6A5A-5671-C2326A25A88D}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Management.Player.csproj">
-      <Project>{0DC9F8F7-53BB-A626-2DAE-9ED094034AA9}</Project>
+      <Project>{DF5AA63C-FD46-E647-C4A2-2933BB026B98}</Project>
       <Name>Unity.XR.Management.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARSubsystems.Player.csproj">
-      <Project>{A1BFC710-6AF6-34B0-0418-504B1CFB6CD8}</Project>
+      <Project>{C1B24EEF-DEFA-F703-E797-0A7D9C89ADAF}</Project>
       <Name>Unity.XR.ARSubsystems.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Facebook.Wit.TTS.Player.csproj">
-      <Project>{5ABF6CAE-7274-1D7B-6D3C-C2739AF69C03}</Project>
+      <Project>{E5C2837A-75C7-D0CC-8CAE-BA8745CA4623}</Project>
       <Name>Facebook.Wit.TTS.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARCore.Player.csproj">
-      <Project>{E8C62975-54F5-D78A-55BA-3428CDDDE0E4}</Project>
+      <Project>{BD2DECFA-D053-4977-1105-581C02D48919}</Project>
       <Name>Unity.XR.ARCore.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
-      <Project>{F3CAB414-FBC5-0621-9B69-307F669005C6}</Project>
+      <Project>{95229E5D-D22C-5B71-9A26-FEC0AB92E2BA}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
-      <Project>{8E5DEE6C-4F98-97FF-C241-5AC1C29CA5AC}</Project>
+      <Project>{6010EEE1-5EB2-3CD7-B0DC-C1EC91E32F1E}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{962C11ED-095E-9031-94C1-92030A75F5AA}</Project>
+      <Project>{47BD3CC9-81CC-4164-4DEE-8542212E077B}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
-      <Project>{CEAB146C-CC05-8917-FE45-980FB56C6997}</Project>
+      <Project>{6594869D-D4BF-C031-E245-97419E236DEA}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Subsystem.Registration.Player.csproj">
-      <Project>{533EA308-2F71-8877-48D6-ADEAA94D393E}</Project>
+      <Project>{97FD6487-4B9F-F306-A49F-061A567DC043}</Project>
       <Name>Unity.Subsystem.Registration.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{08A42F75-045C-6E31-3B76-4A4F9D7A3D76}</Project>
+      <Project>{62F29B2F-B3FA-9B79-2858-9CF92DB33804}</Project>
       <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Player.csproj">
-      <Project>{A162D966-8BE1-30BD-D269-5F6EB78D93B2}</Project>
+      <Project>{DA6DC3EE-C5E8-29F8-289E-9EF02EE16944}</Project>
       <Name>Unity.Services.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{AC55898D-08CD-1CDD-C5DC-42C34E2F4B72}</Project>
+      <Project>{9E71130B-9E94-F5AF-5FFD-0C348B21228E}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Player.csproj">
-      <Project>{B96E5DCB-24B8-494E-302D-422C19E489C2}</Project>
+      <Project>{E9EDE50D-F1F6-2DD7-BBE6-A7802D66E074}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
     <ProjectReference Include="ReqRep.Player.csproj">
-      <Project>{4FD1B673-FFF6-0C4E-E73A-C24078793B9F}</Project>
+      <Project>{DA788B0A-BC96-B20E-E2BB-BCFF90A1CDCA}</Project>
       <Name>ReqRep.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.Player.csproj">
-      <Project>{767DFD38-D073-E216-C4C0-065FA90D5E40}</Project>
+      <Project>{45136FD7-9A1D-A878-F7DA-0123C29D8137}</Project>
       <Name>Unity.Services.Core.Analytics.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
-      <Project>{D38C107A-5166-BC88-B709-DB0ECF58FB80}</Project>
+      <Project>{496129E4-E02C-E9C2-C94D-1086303A3B6A}</Project>
       <Name>Unity.Burst.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.Player.csproj">
-      <Project>{70F6EA28-1E88-8213-5C8A-5FFC1103C19D}</Project>
+      <Project>{4A18105C-7921-E467-686F-BE106D1F94FB}</Project>
       <Name>UnityEngine.XR.LegacyInputHelpers.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Environments.Player.csproj">
-      <Project>{8A9A62B2-E022-1633-907F-F1C6B293163C}</Project>
+      <Project>{68A875C8-60E0-20E0-B022-3F8B36CA6AA5}</Project>
       <Name>Unity.Services.Core.Environments.Player</Name>
     </ProjectReference>
     <ProjectReference Include="VoiceSDK.Dictation.Runtime.Player.csproj">
-      <Project>{3BF488A5-C7E5-D179-B4C4-40A61C2CB6F7}</Project>
+      <Project>{78442E47-664D-0C3F-35AE-699D220742E3}</Project>
       <Name>VoiceSDK.Dictation.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
-      <Project>{4557230C-D091-AA35-7A20-3484D9202CB9}</Project>
+      <Project>{CB4DC8C1-C715-51E4-9ADB-DB557C9EAB86}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Facebook.Wit.TTS.Samples.Player.csproj">
-      <Project>{CE7E6D4C-CAA1-B85E-CA8C-648912239E3A}</Project>
+      <Project>{AB8C961A-700E-593A-98D7-523E15762FA6}</Project>
       <Name>Facebook.Wit.TTS.Samples.Player</Name>
     </ProjectReference>
     <ProjectReference Include="VoiceSDK.Runtime.Player.csproj">
-      <Project>{116C02A9-2379-251D-EC1E-A49B783346AE}</Project>
+      <Project>{31B3E8B9-C659-65E1-9B0F-3804921AED3F}</Project>
       <Name>VoiceSDK.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{0D639B6B-F6CB-74BD-EA45-937AA68BBF91}</Project>
+      <Project>{4507201E-93D6-46A5-A676-3F7E2ACFCA94}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.ARFoundation.Player.csproj">
-      <Project>{7F4B041E-5324-F961-2792-05E8C16CEFD5}</Project>
+      <Project>{37506C4A-3EAA-0438-5416-366336CE9664}</Project>
       <Name>Unity.XR.ARFoundation.Player</Name>
     </ProjectReference>
   </ItemGroup>

@@ -16,9 +16,6 @@ namespace Chat
 
         private void DisplayElizaResponse()
         {
-            var msg = label == null ? "null" : label.ToString();
-            Debug.Log($"FOO {label}");
-            label.text = parser.ElizaResponse;
         }
     }
 }

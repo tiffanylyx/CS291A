@@ -1,7 +1,7 @@
 import time
 import random
 import zmq
-from CS291A.utils_nlp import analyze_sentence_eliza
+from utils_nlp import analyze_sentence_eliza
 import nltk
 
 context = zmq.Context()

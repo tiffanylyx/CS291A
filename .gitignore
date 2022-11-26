@@ -137,12 +137,15 @@ unity/**/msgbrowser_settings.asset*
 #IDE
 .vscode/
 *.csproj
+*.sln
 !Assembly-CSharp.csproj
 !Assembly-CSharp.Player.csproj
 *vsidx
 *.suo
 *.vsconfig
+*.csproj
 .vs
+*.idea
 
 
 #Unity
