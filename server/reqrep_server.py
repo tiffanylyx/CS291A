@@ -23,10 +23,10 @@ while True:
 
     #  reply to client
     data = analyze_sentence(sentence_list)
-    print(data)
 
     # add chatbot response
-    data[DIALOG_KEY] = bot(sentence_list)
+    data[0][DIALOG_KEY] = bot(' '.join(sentence_list))
+    print(data)
 
     json_data = json.dumps(data)
     socket.send_string(json_data)

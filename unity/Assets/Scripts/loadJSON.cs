@@ -42,7 +42,6 @@ public class loadJSON : MonoBehaviour
 
     private void Parse(string json)
     {
-        Debug.Log("Parse");
         try
         {
             ChatbotResponse = String.Empty;
@@ -50,7 +49,6 @@ public class loadJSON : MonoBehaviour
             var uni = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(json);
             foreach (var item in uni)
             {
-                Debug.Log($"parsing {item}");
                 syllables = Convert.ToInt32(item.Value["syllables"]);
                 syllables_all.Add(syllables);
                 senti = Convert.ToSingle(item.Value["senti"]);
@@ -78,20 +76,14 @@ public class loadJSON : MonoBehaviour
                 sent_vec_all.Add(sent_vec);
 
 
-                Debug.Log($"parsing {item} chatbot");
                 ChatbotResponse += item.Value[ChatbotResponseKey].ToString() +  " ";
-                Debug.Log($"parsing {item} chatbot ok");
 
             }
             number = sent_vec_all.Count;
-            Debug.Log(number);
-
             OnChange.Invoke();
         }
         catch (Exception e)
         {
-            ChatbotResponse = e.ToString();
-            OnChange.Invoke();
             Debug.LogError(e.ToString());
         }
     }

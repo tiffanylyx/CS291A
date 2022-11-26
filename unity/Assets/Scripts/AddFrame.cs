@@ -22,6 +22,8 @@ public class AddFrame : MonoBehaviour
     int verbCount;
     private loadJSON parser;
 
+    public Shader shader;
+
 
     // Start is called before the first frame update
     void Start()
@@ -49,12 +51,15 @@ public class AddFrame : MonoBehaviour
 
         GameObject cube = Instantiate(outsideCube);
         cube.transform.SetParent(transform);
-        Material material = new Material(Shader.Find("Shader Graphs/Grid Shadergraph 1"));
+
+        //var shader = Shader.Find("Shader Graphs /Grid Shadergraph 1");
+        Material material = new Material(shader);
+
+
         Color customColor = Color.HSVToRGB(senti_average, senti_average / 3, senti_average / 2);
-        Debug.Log(customColor);
+        
         material.SetColor("_BaseColor", customColor);
         cube.GetComponent<MeshRenderer>().material = material;
-
 
         for (int r = 0; r < number; r++)
         {

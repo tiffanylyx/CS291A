@@ -17,6 +17,7 @@ namespace Chat
         private void DisplayElizaResponse()
         {
             Debug.Log($"FOO {parser.ChatbotResponse}");
+            label.text = parser.ChatbotResponse;
         }
     }
 }

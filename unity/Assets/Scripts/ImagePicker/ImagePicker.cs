@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ImagePicker : MonoBehaviour
 {
     [SerializeField] private bool displayOnStart = true;
-    [SerializeField] private string[] supportedFileTypes = new string[] { "image/*", "public.image"};
+    [SerializeField] private string[] supportedFileTypes = new string[] { "image/*", "public.image" };
     [SerializeField] private Renderer targetRenderer;
 
     private void Start()
@@ -21,9 +21,11 @@ public class ImagePicker : MonoBehaviour
 
     private void OnFilePicked(string path)
     {
-        Debug.Log($"FOO image at {path}");
-        var tex = LoadTexture(path);
-        targetRenderer.material.mainTexture = tex; 
+        if (path != null)
+        {
+            var tex = LoadTexture(path);
+            targetRenderer.material.mainTexture = tex;
+        }
     }
 
     private Texture2D LoadTexture(string imagePath)
