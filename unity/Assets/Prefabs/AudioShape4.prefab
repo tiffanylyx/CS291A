@@ -113,10 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61e64792f8144c21b0620bf9f1f3107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 7799804464861947961, guid: 94d91ac5d62a940d6ae6cc3a17d6dc2d,
-    type: 3}
-  _ObjectToSpawn: {fileID: 424796007364568465, guid: d515ac0c2b9024b319aec931ee1e62f6,
-    type: 3}
+  lineRenderer: {fileID: 7799804464861947961, guid: 94d91ac5d62a940d6ae6cc3a17d6dc2d, type: 3}
+  _ObjectToSpawn: {fileID: 424796007364568465, guid: d515ac0c2b9024b319aec931ee1e62f6, type: 3}
   _FFT: {fileID: 0}
   _FreqBands: 64
   column: 20
@@ -145,7 +143,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 318b4541652ab496e9dc7fa07e6b5817, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

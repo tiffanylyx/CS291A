@@ -26,5 +26,6 @@ namespace ReqRep
         public UnityEvent onClientBusy;
         public UnityEvent onClientFree;
         public UnityEvent<string> onResponse;
+        public AudioClip spokenAudio = null;
     }
 }

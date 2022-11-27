@@ -21,10 +21,12 @@
 using Facebook.WitAi;
 using Facebook.WitAi.Lib;
 using UnityEngine;
-using UnityEngine.UI;
+using Newtonsoft.Json;
 using TMPro;
 using System.Collections;
-using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Oculus.Voice.Demo
 {
@@ -52,7 +54,7 @@ namespace Oculus.Voice.Demo
         private void OnEnable()
         {
             textArea.text = freshStateText;
-            //outputArea.text = "";
+            outputArea.text = "";
             appVoiceExperience.events.OnRequestCreated.AddListener(OnRequestStarted);
             appVoiceExperience.events.OnPartialTranscription.AddListener(OnRequestTranscript);
             appVoiceExperience.events.OnFullTranscription.AddListener(OnRequestTranscript);
@@ -61,13 +63,15 @@ namespace Oculus.Voice.Demo
             appVoiceExperience.events.OnStoppedListeningDueToDeactivation.AddListener(OnListenForcedStop);
             appVoiceExperience.events.OnResponse.AddListener(OnRequestResponse);
             appVoiceExperience.events.OnError.AddListener(OnRequestError);
+            appVoiceExperience.events.OnFullTokens.AddListener(SegmentSpeech);
+            //appVoiceExperience.events.OnByteDataSent.AddListener(OnRequestError);
             appVoiceExperience.OnInitialized += StartSTT;
             appVoiceExperience.enabled = true;
         }
 
         private void Start()
         {
-            //ReqRep.EventManager.Instance.onResponse.AddListener(ProcessResponse);
+            ReqRep.EventManager.Instance.onResponse.AddListener(ProcessResponse);
         }
 
         // Remove delegates
@@ -81,6 +85,7 @@ namespace Oculus.Voice.Demo
             appVoiceExperience.events.OnStoppedListeningDueToDeactivation.RemoveListener(OnListenForcedStop);
             appVoiceExperience.events.OnResponse.RemoveListener(OnRequestResponse);
             appVoiceExperience.events.OnError.RemoveListener(OnRequestError);
+            appVoiceExperience.events.OnFullTokens.RemoveListener(SegmentSpeech);
             appVoiceExperience.OnInitialized -= StartSTT;
         }
 
@@ -140,6 +145,7 @@ namespace Oculus.Voice.Demo
             if (!showJson)
             {
                 textArea.text = $"<color=\"red\">Error: {error}\n\n{message}</color>";
+                textArea.text = "";
             }
             OnRequestComplete();
         }
@@ -147,7 +153,8 @@ namespace Oculus.Voice.Demo
         private void OnRequestComplete()
         {
             _active = false;
-            ToggleActivation();
+            SetActivation(!_active);
+            //ToggleActivation();
         }
 
         // Toggle activation
@@ -155,7 +162,6 @@ namespace Oculus.Voice.Demo
         {
             SetActivation(!_active);
         }
-
         // Set activation
         public void SetActivation(bool toActivated)
         {
@@ -175,23 +181,59 @@ namespace Oculus.Voice.Demo
 
         private void StartSTT()
         {
-            StartCoroutine(StartSTT2());
+            StartCoroutine(StartSTT2(false));
         }
 
-        private IEnumerator StartSTT2()
+        private IEnumerator StartSTT2(bool waitFirst)
         {
-            yield return new WaitForSeconds(0.505f);
+            if (waitFirst)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
             if (!_active)
             {
-                ToggleActivation();
+                bool success = true;
+                try
+                {
+                    ToggleActivation();
+                }
+                catch (System.Exception)
+                {
+                    _active = false;
+                    success = false;
+                }
+                if (!success)
+                {
+                    yield return new WaitForSeconds(0.1f);
+                    StartCoroutine(StartSTT2(false));
+                }
+
             }
             yield return null;
         }
 
         void ProcessResponse(string str)
         {
-            Debug.Log(str);
             outputArea.text = str;
         }
+
+        private void SegmentSpeech(Tuple<string, float[], int, int> tup)
+        {
+            List<SpeechSegmentToken> tokens = JsonConvert.DeserializeObject<List<SpeechSegmentToken>>(tup.Item1);
+            int offset = ((tup.Item2.Length - (tokens.Last().end * tup.Item4 / 1000) - (int)(1.0f * tup.Item4)) >> 1) << 1;
+            if (offset < 0)
+                offset = 0;
+            AudioClip ac = AudioClip.Create("token", tup.Item2.Length - offset, tup.Item3, tup.Item4, false);
+            ac.SetData(tup.Item2.Skip(offset).ToArray(), 0);
+            ReqRep.EventManager.Instance.spokenAudio = ac;
+            return;
+        }
     }
+}
+
+public class SpeechSegmentToken
+{
+    public int end { get; set; }
+    public int start { get; set; }
+    public string token { get; set; }
 }

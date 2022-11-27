@@ -62,7 +62,7 @@ public class AddObject : MonoBehaviour
 
             sent_length = sent_length_all[i];
             Color customColor = Color.HSVToRGB(senti, senti, senti);
-            Debug.Log(customColor);
+            //Debug.Log(customColor);
 
             int i1 = Random.Range(1, 4);
             int i2 = 2 * Random.Range(0, 2) - 1;
@@ -121,6 +121,14 @@ public class AddObject : MonoBehaviour
             material.SetColor("_TintColor", customColor);
             //Material material = newFFTObject.GetComponent<MeshRenderer>().sharedMaterial;
             newFFTObject.GetComponent<MeshRenderer>().material = material;
+            AudioSource aus = newFFTObject.GetComponent<AudioSource>();
+            if(aus)
+			{
+                if(ReqRep.EventManager.Instance.spokenAudio)
+				{
+                    aus.clip = ReqRep.EventManager.Instance.spokenAudio;
+                }
+			}
         }
     }
 }
