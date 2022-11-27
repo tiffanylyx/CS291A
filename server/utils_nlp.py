@@ -93,15 +93,19 @@ def compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, dim):
 # This sentence is to compute the Parts of Speech
 def compute_sent_parts(sentence):
     tokens = nltk.tokenize.word_tokenize(sentence)
-    res = nltk.pos_tag(tokens, tagset='universal')
+    res = nltk.pos_tag(tokens,tagset='universal')
     noun_count = 0
     verb_count = 0
+    noun_list = []
+    verb_list = []
     for i in res:
-        if i[1] == 'NOUN':
-            noun_count += 1
-        elif i[1] == 'VERB':
-            verb_count += 1
-    return noun_count, verb_count
+        if i[1]=='NOUN':
+            noun_count+=1
+            noun_list.append(i[0])
+        elif i[1]=='VERB':
+            verb_count+=1
+            verb_list.append(i[0])
+    return noun_count,verb_count,noun_list,verb_list
 
 
 # To compute the word length
@@ -252,7 +256,7 @@ def main_analyzer(sentence):
     syllables = compute_syllables(sentence, d)
     # cfg = get_cfg_structure(sentence)
     senti = compute_sent_sentiment(sentence)
-    noun_count, verb_count = compute_sent_parts(sentence)
+    noun_count, verb_count,noun_list,verb_list  = compute_sent_parts(sentence)
 
     word_vec = compute_word_vec_in_sentence(sentence, model_word, pca2, pca3, pca4, 3)
 
@@ -267,7 +271,8 @@ def main_analyzer(sentence):
     all_result['sentence_length'] = compute_sent_length(sentence)
     all_result['noun'] = noun_count
     all_result['verb'] = verb_count
-
+    all_result['noun_list'] = noun_list
+    all_result['verb_list'] = verb_list
     return all_result
 
 
