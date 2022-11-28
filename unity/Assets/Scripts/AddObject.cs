@@ -46,13 +46,12 @@ public class AddObject : MonoBehaviour
     private void GenerateGraphics()
     {
         ClearGraphics();
-        sent_vec_all = parser.sent_vec_all;
 
-        senti_all = parser.senti_all;
-
-        numberToSpawn = parser.number;
-
-        sent_length_all = parser.sent_length_all;
+        // Accumulate features
+        numberToSpawn += parser.number;
+        sent_length_all.AddRange(parser.sent_length_all);
+        senti_all.AddRange(parser.senti_all);
+        sent_vec_all.AddRange(parser.sent_vec_all);
 
 
         for (int i = 0; i < numberToSpawn; i++)
@@ -62,7 +61,6 @@ public class AddObject : MonoBehaviour
 
             sent_length = sent_length_all[i];
             Color customColor = Color.HSVToRGB(senti, senti, senti);
-            //Debug.Log(customColor);
 
             int i1 = Random.Range(1, 4);
             int i2 = 2 * Random.Range(0, 2) - 1;
@@ -122,13 +120,13 @@ public class AddObject : MonoBehaviour
             //Material material = newFFTObject.GetComponent<MeshRenderer>().sharedMaterial;
             newFFTObject.GetComponent<MeshRenderer>().material = material;
             AudioSource aus = newFFTObject.GetComponent<AudioSource>();
-            if(aus)
-			{
-                if(ReqRep.EventManager.Instance.spokenAudio)
-				{
+            if (aus)
+            {
+                if (ReqRep.EventManager.Instance.spokenAudio)
+                {
                     aus.clip = ReqRep.EventManager.Instance.spokenAudio;
                 }
-			}
+            }
         }
     }
 }

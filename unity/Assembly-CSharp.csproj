@@ -66,17 +66,18 @@
     <Compile Include="Assets\Scripts\scale.cs" />
     <Compile Include="Assets\Scripts\loadJSON.cs" />
     <Compile Include="Assets\Scripts\FrequencyBandAnalyser.cs" />
+    <Compile Include="Assets\Diorama.cs" />
     <Compile Include="Assets\Scripts\AudioShapeSurface.cs" />
     <Compile Include="Assets\Scripts\Chat\ChatbotDisplay.cs" />
     <Compile Include="Assets\Scripts\FFTObjectV2.cs" />
     <Compile Include="Assets\Scripts\FFTObjectArray.cs" />
     <Compile Include="Assets\Scripts\FFTLine.cs" />
     <Compile Include="Assets\Scripts\AudioReactMesh.cs" />
+    <Compile Include="Assets\Scripts\ImagePicker\ImagePicker.cs" />
     <Compile Include="Assets\Scripts\FFTSetMaterialColour.cs" />
     <Compile Include="Assets\Scripts\AudioPoint.cs" />
     <Compile Include="Assets\Scripts\CustomInteractionHandler.cs" />
     <Compile Include="Assets\Scripts\AudioRandomMesh.cs" />
-    <Compile Include="Assets\Scripts\ImagePicker\ImagePicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -866,6 +867,10 @@
       <Project>{60BDDB41-60EF-7B5B-2808-8CDCEF8865CD}</Project>
       <Name>Unity.Mathematics.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="NativeFilePicker.Runtime.csproj">
+      <Project>{D04FDFCB-4EBC-F5E3-3FFD-351015BC5CA2}</Project>
+      <Name>NativeFilePicker.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.XR.ARSubsystems.csproj">
       <Project>{FA97DE00-BCCD-3E9F-C596-AC95A9995846}</Project>
       <Name>Unity.XR.ARSubsystems</Name>
@@ -1014,6 +1019,10 @@
       <Project>{8DEFBFFE-DCA2-FA00-7462-45C31781697C}</Project>
       <Name>Facebook.Wit.TTS.Samples</Name>
     </ProjectReference>
+    <ProjectReference Include="NativeFilePicker.Editor.csproj">
+      <Project>{459F0E38-5342-2B69-BA3A-BABE76655D6D}</Project>
+      <Name>NativeFilePicker.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="VoiceSDK.Runtime.csproj">
       <Project>{C593D8C7-EE65-3E44-2A4C-0A14AC9ADD20}</Project>
       <Name>VoiceSDK.Runtime</Name>
@@ -1037,14 +1046,6 @@
     <ProjectReference Include="Unity.XR.ARFoundation.csproj">
       <Project>{F62A8E43-8BCF-6ECB-8E85-60256F380BA4}</Project>
       <Name>Unity.XR.ARFoundation</Name>
-    </ProjectReference>
-    <ProjectReference Include="NativeFilePicker.Runtime.csproj">
-      <Project>{D04FDFCB-4EBC-F5E3-3FFD-351015BC5CA2}</Project>
-      <Name>NativeFilePicker.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="NativeFilePicker.Editor.csproj">
-      <Project>{459F0E38-5342-2B69-BA3A-BABE76655D6D}</Project>
-      <Name>NativeFilePicker.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -22,7 +22,7 @@ public class AddFrame : MonoBehaviour
     int wordCount;
     int nounCount;
     int verbCount;
-    
+
     private loadJSON parser;
     private readonly List<GameObject> graphics = new List<GameObject>();
 
@@ -45,14 +45,17 @@ public class AddFrame : MonoBehaviour
     {
         ClearGraphics();
 
-        wordCount = parser.wordCount;
-        nounCount = parser.nounCount;
-        verbCount = parser.verbCount;
+        // Accumulate features
+        wordCount += parser.wordCount;
+        nounCount += parser.nounCount;
+        verbCount += parser.verbCount;
+        senti_all.AddRange(parser.senti_all);
+
         spawn_prob1 = (float)nounCount / (float)wordCount;
         spawn_prob2 = (float)verbCount / (float)wordCount;
         number = (int)(2 * (float)size / frame_size);
         float p1, p2, p3, p4;
-        senti_all = parser.senti_all;
+        
         for (int i = 0; i < senti_all.Count; i++)
         {
             senti_average += senti_all[i];

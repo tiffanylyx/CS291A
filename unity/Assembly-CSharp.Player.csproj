@@ -66,17 +66,18 @@
     <Compile Include="Assets\Scripts\scale.cs" />
     <Compile Include="Assets\Scripts\loadJSON.cs" />
     <Compile Include="Assets\Scripts\FrequencyBandAnalyser.cs" />
+    <Compile Include="Assets\Diorama.cs" />
     <Compile Include="Assets\Scripts\AudioShapeSurface.cs" />
     <Compile Include="Assets\Scripts\Chat\ChatbotDisplay.cs" />
     <Compile Include="Assets\Scripts\FFTObjectV2.cs" />
     <Compile Include="Assets\Scripts\FFTObjectArray.cs" />
     <Compile Include="Assets\Scripts\FFTLine.cs" />
     <Compile Include="Assets\Scripts\AudioReactMesh.cs" />
+    <Compile Include="Assets\Scripts\ImagePicker\ImagePicker.cs" />
     <Compile Include="Assets\Scripts\FFTSetMaterialColour.cs" />
     <Compile Include="Assets\Scripts\AudioPoint.cs" />
     <Compile Include="Assets\Scripts\CustomInteractionHandler.cs" />
     <Compile Include="Assets\Scripts\AudioRandomMesh.cs" />
-    <Compile Include="Assets\Scripts\ImagePicker\ImagePicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -744,6 +745,10 @@
       <Project>{DF5AA63C-FD46-E647-C4A2-2933BB026B98}</Project>
       <Name>Unity.XR.Management.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="NativeFilePicker.Runtime.Player.csproj">
+      <Project>{FA44B9E7-2097-02BD-3049-872444924C2D}</Project>
+      <Name>NativeFilePicker.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.XR.ARSubsystems.Player.csproj">
       <Project>{C1B24EEF-DEFA-F703-E797-0A7D9C89ADAF}</Project>
       <Name>Unity.XR.ARSubsystems.Player</Name>
@@ -835,10 +840,6 @@
     <ProjectReference Include="Unity.XR.ARFoundation.Player.csproj">
       <Project>{37506C4A-3EAA-0438-5416-366336CE9664}</Project>
       <Name>Unity.XR.ARFoundation.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="NativeFilePicker.Runtime.Player.csproj">
-      <Project>{FA44B9E7-2097-02BD-3049-872444924C2D}</Project>
-      <Name>NativeFilePicker.Runtime.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
